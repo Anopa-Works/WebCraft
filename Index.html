@@ -3,45 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>WebCraftSolutions | Professional Web Design</title>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <title>WebCraft Solutions - Professional Web Design in Zimbabwe</title>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap">
     <style>
         :root {
-            --navy: #000080;
-            --champagne: #F7E7CE;
-            --gold: #D4AF37;
+            --navy-blue: #000080;
+            --champagne-gold: #C9B176;
             --white: #FFFFFF;
-            --black: #000000;
+            --light-gray: #F5F5F5;
+            --dark-gray: #333333;
         }
         
         * {
             margin: 0;
             padding: 0;
             box-sizing: border-box;
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
         }
         
         body {
-            background-color: var(--white);
-            color: var(--black);
+            font-family: 'Inter', sans-serif;
             line-height: 1.6;
+            color: var(--dark-gray);
+            background-color: var(--white);
+        }
+        
+        .clash-font {
+            font-family: 'Inter', 'Helvetica Neue', Arial, sans-serif;
+            font-weight: 700;
+            letter-spacing: 0.5px;
         }
         
         .container {
             width: 90%;
             max-width: 1200px;
             margin: 0 auto;
+            padding: 0 20px;
         }
         
-        /* Header & Navigation */
+        /* Header Styles */
         header {
-            background-color: var(--navy);
-            padding: 1rem 0;
+            background-color: var(--navy-blue);
+            padding: 20px 0;
             position: fixed;
             width: 100%;
             top: 0;
             z-index: 1000;
-            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
         }
         
         .header-container {
@@ -51,14 +58,13 @@
         }
         
         .logo {
-            color: var(--champagne);
-            font-size: 1.8rem;
-            font-weight: bold;
+            font-size: 24px;
+            color: var(--white);
             text-decoration: none;
         }
         
         .logo span {
-            color: var(--gold);
+            color: var(--champagne-gold);
         }
         
         nav ul {
@@ -67,7 +73,7 @@
         }
         
         nav ul li {
-            margin-left: 2rem;
+            margin-left: 30px;
         }
         
         nav ul li a {
@@ -78,333 +84,322 @@
         }
         
         nav ul li a:hover {
-            color: var(--gold);
+            color: var(--champagne-gold);
+        }
+        
+        .mobile-menu-btn {
+            display: none;
+            background: none;
+            border: none;
+            color: var(--white);
+            font-size: 24px;
+            cursor: pointer;
         }
         
         /* Hero Section */
         .hero {
-            background: linear-gradient(rgba(0, 0, 128, 0.8), rgba(0, 0, 128, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect fill="%23D4AF37" opacity="0.2" width="50" height="50"/><rect fill="%23D4AF37" opacity="0.2" x="50" y="50" width="50" height="50"/></svg>');
+            background: linear-gradient(rgba(0, 0, 128, 0.8), rgba(0, 0, 128, 0.9)), url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><rect width="100" height="100" fill="%23000050"/><path d="M0 0L100 100" stroke="%23C9B176" stroke-width="2"/><path d="M100 0L0 100" stroke="%23C9B176" stroke-width="2"/></svg>');
             background-size: cover;
+            background-position: center;
             color: var(--white);
-            padding: 8rem 0 5rem;
+            padding: 160px 0 100px;
             text-align: center;
         }
         
         .hero h1 {
             font-size: 3rem;
-            margin-bottom: 1rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
         }
         
         .hero p {
             font-size: 1.2rem;
             max-width: 700px;
-            margin: 0 auto 2rem;
+            margin: 0 auto 30px;
         }
         
         .btn {
             display: inline-block;
-            background-color: var(--gold);
-            color: var(--navy);
-            padding: 0.8rem 2rem;
-            border-radius: 5px;
+            background-color: var(--champagne-gold);
+            color: var(--navy-blue);
+            padding: 12px 30px;
+            border-radius: 4px;
             text-decoration: none;
-            font-weight: bold;
+            font-weight: 600;
             transition: all 0.3s;
+            border: 2px solid var(--champagne-gold);
         }
         
         .btn:hover {
-            background-color: var(--champagne);
-            transform: translateY(-3px);
+            background-color: transparent;
+            color: var(--champagne-gold);
         }
         
         /* Services Section */
         .services {
-            padding: 5rem 0;
-            background-color: var(--white);
+            padding: 80px 0;
+            background-color: var(--light-gray);
         }
         
         .section-title {
             text-align: center;
-            margin-bottom: 3rem;
-            color: var(--navy);
+            margin-bottom: 50px;
+            color: var(--navy-blue);
         }
         
         .section-title h2 {
             font-size: 2.5rem;
-            margin-bottom: 1rem;
+            margin-bottom: 15px;
         }
         
-        .section-title::after {
-            content: "";
-            display: block;
-            width: 80px;
-            height: 4px;
-            background-color: var(--gold);
+        .section-title p {
+            color: var(--dark-gray);
+            max-width: 700px;
             margin: 0 auto;
         }
         
         .services-grid {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
+            gap: 30px;
         }
         
         .service-card {
             background-color: var(--white);
-            border: 1px solid #eee;
-            border-radius: 5px;
-            padding: 2rem;
-            text-align: center;
-            transition: transform 0.3s, box-shadow 0.3s;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            transition: transform 0.3s;
         }
         
         .service-card:hover {
             transform: translateY(-10px);
-            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
         }
         
         .service-icon {
-            font-size: 3rem;
-            color: var(--gold);
-            margin-bottom: 1rem;
-        }
-        
-        .service-card h3 {
-            color: var(--navy);
-            margin-bottom: 1rem;
-        }
-        
-        /* Portfolio Section */
-        .portfolio {
-            padding: 5rem 0;
-            background-color: #f9f9f9;
-        }
-        
-        .portfolio-grid {
-            display: grid;
-            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-            gap: 2rem;
-        }
-        
-        .portfolio-item {
-            position: relative;
-            overflow: hidden;
-            border-radius: 5px;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .portfolio-item img {
-            width: 100%;
-            height: 250px;
-            object-fit: cover;
-            transition: transform 0.5s;
-        }
-        
-        .portfolio-item:hover img {
-            transform: scale(1.1);
-        }
-        
-        .portfolio-overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 128, 0.8);
-            color: var(--white);
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            opacity: 0;
-            transition: opacity 0.5s;
-            padding: 2rem;
+            background-color: var(--navy-blue);
+            color: var(--champagne-gold);
+            font-size: 2.5rem;
+            padding: 30px;
             text-align: center;
         }
         
-        .portfolio-item:hover .portfolio-overlay {
-            opacity: 1;
+        .service-content {
+            padding: 25px;
+        }
+        
+        .service-content h3 {
+            color: var(--navy-blue);
+            margin-bottom: 15px;
         }
         
         /* About Section */
         .about {
-            padding: 5rem 0;
+            padding: 80px 0;
             background-color: var(--white);
         }
         
         .about-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
+            gap: 50px;
             align-items: center;
         }
         
-        .about-image {
-            border-radius: 5px;
-            overflow: hidden;
-            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-        }
-        
-        .about-image img {
-            width: 100%;
-            height: auto;
-            display: block;
-        }
-        
         .about-text h2 {
-            color: var(--navy);
-            margin-bottom: 1.5rem;
+            color: var(--navy-blue);
+            margin-bottom: 20px;
         }
         
         .about-text p {
-            margin-bottom: 1.5rem;
+            margin-bottom: 15px;
+        }
+        
+        .about-image {
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            background-color: var(--navy-blue);
+            height: 300px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: var(--champagne-gold);
+            font-size: 1.5rem;
+            font-weight: 700;
         }
         
         /* Contact Section */
         .contact {
-            padding: 5rem 0;
-            background-color: #f9f9f9;
+            padding: 80px 0;
+            background-color: var(--light-gray);
         }
         
         .contact-container {
             display: grid;
             grid-template-columns: 1fr 1fr;
-            gap: 3rem;
-        }
-        
-        .contact-info {
-            color: var(--navy);
+            gap: 50px;
         }
         
         .contact-info h2 {
-            margin-bottom: 1.5rem;
-        }
-        
-        .contact-info p {
-            margin-bottom: 2rem;
+            color: var(--navy-blue);
+            margin-bottom: 20px;
         }
         
         .contact-details {
-            margin-top: 2rem;
+            margin-top: 30px;
         }
         
-        .contact-details div {
+        .contact-item {
             display: flex;
             align-items: center;
-            margin-bottom: 1rem;
+            margin-bottom: 20px;
         }
         
-        .contact-details i {
-            color: var(--gold);
-            font-size: 1.5rem;
-            margin-right: 1rem;
+        .contact-icon {
+            background-color: var(--navy-blue);
+            color: var(--champagne-gold);
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-right: 15px;
+            font-size: 1.2rem;
         }
         
-        .contact-info a {
-            color: var(--navy);
-            text-decoration: none;
-            transition: color 0.3s;
+        .contact-text h4 {
+            color: var(--navy-blue);
+            margin-bottom: 5px;
         }
         
-        .contact-info a:hover {
-            color: var(--gold);
+        .contact-form {
+            background-color: var(--white);
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+        }
+        
+        .form-group {
+            margin-bottom: 20px;
+        }
+        
+        .form-group label {
+            display: block;
+            margin-bottom: 5px;
+            font-weight: 500;
+            color: var(--navy-blue);
+        }
+        
+        .form-group input,
+        .form-group textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .form-group textarea {
+            min-height: 120px;
+            resize: vertical;
         }
         
         /* Footer */
         footer {
-            background-color: var(--navy);
+            background-color: var(--navy-blue);
             color: var(--white);
-            padding: 3rem 0 1rem;
+            padding: 40px 0 20px;
         }
         
-        .footer-content {
+        .footer-container {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-            gap: 2rem;
-            margin-bottom: 2rem;
+            gap: 30px;
         }
         
-        .footer-logo {
-            font-size: 1.5rem;
-            font-weight: bold;
-            color: var(--champagne);
-            margin-bottom: 1rem;
-        }
-        
-        .footer-logo span {
-            color: var(--gold);
-        }
-        
-        .footer-links h3,
-        .footer-newsletter h3 {
-            color: var(--champagne);
-            margin-bottom: 1rem;
+        .footer-col h3 {
+            color: var(--champagne-gold);
+            margin-bottom: 20px;
             font-size: 1.2rem;
         }
         
-        .footer-links ul {
-            list-style: none;
-        }
-        
-        .footer-links li {
-            margin-bottom: 0.5rem;
-        }
-        
-        .footer-links a {
+        .footer-col p, .footer-col a {
             color: var(--white);
+            margin-bottom: 10px;
+            display: block;
             text-decoration: none;
             transition: color 0.3s;
         }
         
-        .footer-links a:hover {
-            color: var(--gold);
+        .footer-col a:hover {
+            color: var(--champagne-gold);
         }
         
-        .footer-bottom {
+        .copyright {
             text-align: center;
-            padding-top: 2rem;
+            margin-top: 40px;
+            padding-top: 20px;
             border-top: 1px solid rgba(255, 255, 255, 0.1);
         }
         
-        /* Responsive Design */
-        @media (max-width: 768px) {
-            .header-container {
-                flex-direction: column;
-            }
-            
-            nav ul {
-                margin-top: 1rem;
-            }
-            
-            nav ul li {
-                margin: 0 0.5rem;
-            }
-            
-            .hero h1 {
-                font-size: 2.5rem;
-            }
-            
+        /* Responsive Styles */
+        @media (max-width: 992px) {
             .about-content,
             .contact-container {
                 grid-template-columns: 1fr;
             }
             
-            .section-title h2 {
-                font-size: 2rem;
+            .about-image {
+                order: -1;
+            }
+        }
+        
+        @media (max-width: 768px) {
+            .mobile-menu-btn {
+                display: block;
+            }
+            
+            nav {
+                position: fixed;
+                top: 80px;
+                left: -100%;
+                width: 100%;
+                height: calc(100vh - 80px);
+                background-color: var(--navy-blue);
+                transition: left 0.3s;
+                padding: 20px;
+            }
+            
+            nav.active {
+                left: 0;
+            }
+            
+            nav ul {
+                flex-direction: column;
+            }
+            
+            nav ul li {
+                margin: 15px 0;
+            }
+            
+            .hero h1 {
+                font-size: 2.5rem;
             }
         }
     </style>
 </head>
 <body>
-    <!-- Header & Navigation -->
+    <!-- Header -->
     <header>
         <div class="container header-container">
-            <a href="#" class="logo">Web<span>Craft</span>Solutions</a>
-            <nav>
+            <a href="#" class="logo clash-font">WebCraft <span>Solutions</span></a>
+            <button class="mobile-menu-btn">☰</button>
+            <nav id="nav">
                 <ul>
                     <li><a href="#home">Home</a></li>
                     <li><a href="#services">Services</a></li>
-                    <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
@@ -415,8 +410,8 @@
     <!-- Hero Section -->
     <section class="hero" id="home">
         <div class="container">
-            <h1>Crafting Digital Excellence for Your Business</h1>
-            <p>We create responsive, modern websites that convert visitors into customers and help businesses grow online</p>
+            <h1 class="clash-font">Crafting Digital Excellence For Zimbabwean Businesses</h1>
+            <p>Professional web design and development services based in Bindura, Zimbabwe. We build stunning, functional websites that help your business grow.</p>
             <a href="#contact" class="btn">Get Started Today</a>
         </div>
     </section>
@@ -425,62 +420,36 @@
     <section class="services" id="services">
         <div class="container">
             <div class="section-title">
-                <h2>Our Services</h2>
-                <p>Everything you need to establish a powerful online presence</p>
+                <h2 class="clash-font">Our Services</h2>
+                <p>We offer comprehensive web design and development solutions tailored to your business needs</p>
             </div>
             <div class="services-grid">
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-laptop-code"></i>
+                    <div class="service-icon">💻</div>
+                    <div class="service-content">
+                        <h3 class="clash-font">Business Websites</h3>
+                        <p>Professional, responsive websites designed to represent your brand and convert visitors into customers.</p>
                     </div>
-                    <h3>Custom Website Design</h3>
-                    <p>Beautiful, responsive websites tailored to your brand and business goals.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-shopping-cart"></i>
+                    <div class="service-icon">🛒</div>
+                    <div class="service-content">
+                        <h3 class="clash-font">E-Commerce Solutions</h3>
+                        <p>Online stores with secure payment processing, product management, and inventory tracking.</p>
                     </div>
-                    <h3>E-Commerce Solutions</h3>
-                    <p>Online stores designed to maximize sales and provide seamless shopping experiences.</p>
                 </div>
                 <div class="service-card">
-                    <div class="service-icon">
-                        <i class="fas fa-search"></i>
-                    </div>
-                    <h3>SEO Optimization</h3>
-                    <p>Get found by more customers with our search engine optimization services.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Portfolio Section -->
-    <section class="portfolio" id="portfolio">
-        <div class="container">
-            <div class="section-title">
-                <h2>Our Portfolio</h2>
-                <p>See examples of our recent work</p>
-            </div>
-            <div class="portfolio-grid">
-                <div class="portfolio-item">
-                    <img src="https://placehold.co/600x400/000080/FFFFFF/png?text=Restaurant+Website" alt="Restaurant Website">
-                    <div class="portfolio-overlay">
-                        <h3>Gourmet Bistro</h3>
-                        <p>Elegant website for a high-end restaurant with online reservations</p>
+                    <div class="service-icon">📱</div>
+                    <div class="service-content">
+                        <h3 class="clash-font">Mobile Responsive Design</h3>
+                        <p>Websites that look great and function perfectly on all devices, from desktops to smartphones.</p>
                     </div>
                 </div>
-                <div class="portfolio-item">
-                    <img src="https://placehold.co/600x400/000080/FFFFFF/png?text=Retail+Store" alt="Retail Store">
-                    <div class="portfolio-overlay">
-                        <h3>Urban Fashion</h3>
-                        <p>E-commerce site for a clothing retailer with integrated inventory</p>
-                    </div>
-                </div>
-                <div class="portfolio-item">
-                    <img src="https://placehold.co/600x400/000080/FFFFFF/png?text=Consulting+Firm" alt="Consulting Firm">
-                    <div class="portfolio-overlay">
-                        <h3>Strategic Consulting</h3>
-                        <p>Professional website for a business consulting firm</p>
+                <div class="service-card">
+                    <div class="service-icon">🔧</div>
+                    <div class="service-content">
+                        <h3 class="clash-font">Website Maintenance</h3>
+                        <p>Ongoing support and updates to keep your website secure, current, and functioning optimally.</p>
                     </div>
                 </div>
             </div>
@@ -490,19 +459,15 @@
     <!-- About Section -->
     <section class="about" id="about">
         <div class="container">
-            <div class="section-title">
-                <h2>About Us</h2>
-                <p>Get to know our team and mission</p>
-            </div>
             <div class="about-content">
-                <div class="about-image">
-                    <img src="https://placehold.co/600x400/000080/FFFFFF/png?text=Our+Team" alt="Our Team">
-                </div>
                 <div class="about-text">
-                    <h2>We Create Digital Experiences That Drive Growth</h2>
-                    <p>At WebCraftSolutions, we specialize in creating beautiful, functional websites that help businesses establish a strong online presence and achieve their goals.</p>
-                    <p>Our team of experienced designers and developers work closely with each client to understand their unique needs and deliver solutions that exceed expectations.</p>
-                    <a href="#contact" class="btn">Let's Talk About Your Project</a>
+                    <h2 class="clash-font">About WebCraft Solutions</h2>
+                    <p>Based in Bindura, Zimbabwe, WebCraft Solutions is dedicated to helping local businesses establish a strong online presence. We understand the unique challenges and opportunities facing Zimbabwean businesses in the digital age.</p>
+                    <p>Our team of skilled designers and developers combine technical expertise with creative vision to deliver websites that not only look impressive but also drive results.</p>
+                    <p>While we currently focus on website design and development, we're continuously expanding our services to better serve the growing digital needs of Zimbabwean businesses.</p>
+                </div>
+                <div class="about-image">
+                    WebCraft Solutions - Bindura, Zimbabwe
                 </div>
             </div>
         </div>
@@ -512,45 +477,54 @@
     <section class="contact" id="contact">
         <div class="container">
             <div class="section-title">
-                <h2>Contact Us</h2>
-                <p>Get in touch to discuss your project</p>
+                <h2 class="clash-font">Get In Touch</h2>
+                <p>Ready to elevate your online presence? Contact us today for a free consultation</p>
             </div>
             <div class="contact-container">
                 <div class="contact-info">
-                    <h2>Let's Start a Conversation</h2>
-                    <p>Interested in our web design services? Reach out to us using the contact details below.</p>
+                    <h2 class="clash-font">Contact Details</h2>
+                    <p>Reach out to us to discuss your website needs. We're here to help your business succeed online.</p>
                     <div class="contact-details">
-                        <div>
-                            <i class="fas fa-envelope"></i>
-                            <span><a href="mailto:fluidserviceplatform@gmail.com">fluidserviceplatform@gmail.com</a></span>
+                        <div class="contact-item">
+                            <div class="contact-icon">✉️</div>
+                            <div class="contact-text">
+                                <h4>Email</h4>
+                                <p>fluidserviceplatform@gmail.com</p>
+                            </div>
                         </div>
-                        <div>
-                            <i class="fas fa-phone"></i>
-                            <span><a href="tel:0714603637">0714603637</a></span>
+                        <div class="contact-item">
+                            <div class="contact-icon">📞</div>
+                            <div class="contact-text">
+                                <h4>Phone</h4>
+                                <p>071 460 3637</p>
+                            </div>
                         </div>
-                        <div>
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>Nairobi, Kenya</span>
+                        <div class="contact-item">
+                            <div class="contact-icon">📍</div>
+                            <div class="contact-text">
+                                <h4>Location</h4>
+                                <p>Bindura, Zimbabwe</p>
+                            </div>
                         </div>
                     </div>
                 </div>
-                <div class="contact-info">
-                    <h2>Business Hours</h2>
-                    <p>We're available to discuss your project during these hours:</p>
-                    <div class="contact-details">
-                        <div>
-                            <i class="fas fa-clock"></i>
-                            <span>Monday-Friday: 9am - 5pm</span>
+                <div class="contact-form">
+                    <h3 class="clash-font">Send Us a Message</h3>
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" required>
                         </div>
-                        <div>
-                            <i class="fas fa-clock"></i>
-                            <span>Saturday: 10am - 2pm</span>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" required>
                         </div>
-                        <div>
-                            <i class="fas fa-clock"></i>
-                            <span>Sunday: Closed</span>
+                        <div class="form-group">
+                            <label for="message">Your Message</label>
+                            <textarea id="message" required></textarea>
                         </div>
-                    </div>
+                        <button type="submit" class="btn">Send Message</button>
+                    </form>
                 </div>
             </div>
         </div>
@@ -559,33 +533,56 @@
     <!-- Footer -->
     <footer>
         <div class="container">
-            <div class="footer-content">
-                <div class="footer-about">
-                    <div class="footer-logo">Web<span>Craft</span>Solutions</div>
-                    <p>Creating exceptional websites that help businesses thrive in the digital world.</p>
+            <div class="footer-container">
+                <div class="footer-col">
+                    <h3 class="clash-font">WebCraft Solutions</h3>
+                    <p>Professional web design and development services based in Bindura, Zimbabwe. Helping businesses establish a powerful online presence.</p>
                 </div>
-                <div class="footer-links">
+                <div class="footer-col">
                     <h3>Quick Links</h3>
-                    <ul>
-                        <li><a href="#home">Home</a></li>
-                        <li><a href="#services">Services</a></li>
-                        <li><a href="#portfolio">Portfolio</a></li>
-                        <li><a href="#about">About</a></li>
-                        <li><a href="#contact">Contact</a></li>
-                    </ul>
+                    <a href="#home">Home</a>
+                    <a href="#services">Services</a>
+                    <a href="#about">About</a>
+                    <a href="#contact">Contact</a>
                 </div>
-                <div class="footer-newsletter">
-                    <h3>Stay Updated</h3>
-                    <p>Subscribe to our newsletter for updates and offers</p>
+                <div class="footer-col">
+                    <h3>Contact Info</h3>
+                    <p>Bindura, Zimbabwe</p>
+                    <p>fluidserviceplatform@gmail.com</p>
+                    <p>071 460 3637</p>
                 </div>
             </div>
-            <div class="footer-bottom">
-                <p>&copy; 2023 WebCraftSolutions. All rights reserved.</p>
+            <div class="copyright">
+                <p>&copy; 2023 WebCraft Solutions. All rights reserved.</p>
             </div>
         </div>
     </footer>
 
     <script>
+        // Mobile menu toggle
+        const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+        const nav = document.getElementById('nav');
+        
+        mobileMenuBtn.addEventListener('click', () => {
+            nav.classList.toggle('active');
+        });
+        
+        // Close mobile menu when clicking on a link
+        const navLinks = document.querySelectorAll('nav ul li a');
+        navLinks.forEach(link => {
+            link.addEventListener('click', () => {
+                nav.classList.remove('active');
+            });
+        });
+        
+        // Simple form submission
+        const contactForm = document.getElementById('contactForm');
+        contactForm.addEventListener('submit', (e) => {
+            e.preventDefault();
+            alert('Thank you for your message! We will contact you soon.');
+            contactForm.reset();
+        });
+        
         // Smooth scrolling for navigation links
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
             anchor.addEventListener('click', function (e) {
